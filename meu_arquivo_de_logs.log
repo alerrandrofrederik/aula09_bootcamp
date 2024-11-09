@@ -1,0 +1,22 @@
+2024-11-08T22:14:42.417795-0300 INFO Chamando função 'soma' com args (1, 3) e kwargs {} log.py
+2024-11-08T22:14:42.417795-0300 INFO Função 'soma' retornou 4 log.py
+2024-11-08T22:14:42.417795-0300 INFO Chamando função 'soma' com args (1, '2') e kwargs {} log.py
+2024-11-08T22:14:42.417795-0300 ERROR Exceção capturada em 'soma': unsupported operand type(s) for +: 'int' and 'str' log.py
+Traceback (most recent call last):
+
+  File "C:\Users\alerr\workspace\jornadadedados\bootcamp_python\aula09_bootcamp\exemplo_00.py", line 8, in <module>
+    soma(1, '2')
+    └ <function soma at 0x000002A7F4D39300>
+
+> File "C:\Users\alerr\workspace\jornadadedados\bootcamp_python\aula09_bootcamp\log.py", line 27, in wrapper
+    result = func(*args, **kwargs)
+             │     │       └ {}
+             │     └ (1, '2')
+             └ <function soma at 0x000002A7F4A7A340>
+
+  File "C:\Users\alerr\workspace\jornadadedados\bootcamp_python\aula09_bootcamp\exemplo_00.py", line 5, in soma
+    return a + b
+           │   └ '2'
+           └ 1
+
+TypeError: unsupported operand type(s) for +: 'int' and 'str'

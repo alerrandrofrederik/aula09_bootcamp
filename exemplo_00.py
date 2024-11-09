@@ -1,8 +1,8 @@
-from loguru import logger
+from log import log_decorator
 
-logger.add('meu_app.log')
+@log_decorator # esse é um decorator para capturar o log da funcao
 def soma(a, b):
-    logger.info(f'Somando {a} + {b}')
     return a + b
 
-logger.info(soma(1, '2'))
+soma(1, 3)
+soma(1, '2')
